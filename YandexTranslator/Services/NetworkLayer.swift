@@ -35,12 +35,6 @@ extension YandexServerAPI: TargetType {
     
     var parameterEncoding: ParameterEncoding {
         return JSONEncoding.default
-        /* switch self {
-        case .detect, .translate:
-            return URLEncoding.default
-        default:
-            return JSONEncoding.default
-        }*/
     }
     
     var method: Moya.Method {
