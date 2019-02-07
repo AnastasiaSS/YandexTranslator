@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5A05197303E16A28F61583EA /* Pods_YandexTranslatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFD74C791B34E09CE7C5C13 /* Pods_YandexTranslatorTests.framework */; };
+		BC1A46DD220BA68100A5039C /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A46DC220BA68100A5039C /* MessageCell.swift */; };
 		BC4618D42204E65500E07A7E /* MessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4618D32204E65500E07A7E /* MessageView.xib */; };
 		BC4618D62204F01400E07A7E /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4618D52204F01400E07A7E /* MessageView.swift */; };
-		BC4618D82205067F00E07A7E /* MessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4618D72205067F00E07A7E /* MessageViewCell.swift */; };
 		BC5CACE22207814900F5E364 /* RequestedTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5CACE12207814900F5E364 /* RequestedTypes.swift */; };
 		BC60F96B22063567004D5BDC /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60F96A22063567004D5BDC /* Language.swift */; };
 		BC60F96D220652D8004D5BDC /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60F96C220652D8004D5BDC /* NetworkLayer.swift */; };
@@ -46,9 +46,9 @@
 		33C795835259E06644C24CF4 /* Pods-YandexTranslator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YandexTranslator.release.xcconfig"; path = "Pods/Target Support Files/Pods-YandexTranslator/Pods-YandexTranslator.release.xcconfig"; sourceTree = "<group>"; };
 		3EFD74C791B34E09CE7C5C13 /* Pods_YandexTranslatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YandexTranslatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3E5284903F771444626579 /* Pods-YandexTranslatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YandexTranslatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YandexTranslatorTests/Pods-YandexTranslatorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BC1A46DC220BA68100A5039C /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		BC4618D32204E65500E07A7E /* MessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageView.xib; sourceTree = "<group>"; };
 		BC4618D52204F01400E07A7E /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
-		BC4618D72205067F00E07A7E /* MessageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewCell.swift; sourceTree = "<group>"; };
 		BC5CACE12207814900F5E364 /* RequestedTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestedTypes.swift; sourceTree = "<group>"; };
 		BC60F96A22063567004D5BDC /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		BC60F96C220652D8004D5BDC /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
@@ -120,6 +120,7 @@
 				BCC6468221FB43CE0025C8C1 /* TranslatorView.swift */,
 				BC4618D32204E65500E07A7E /* MessageView.xib */,
 				BC4618D52204F01400E07A7E /* MessageView.swift */,
+				BC1A46DC220BA68100A5039C /* MessageCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -157,19 +158,10 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		BC9AC76922091A5400FE618C /* ViewCells */ = {
-			isa = PBXGroup;
-			children = (
-				BC4618D72205067F00E07A7E /* MessageViewCell.swift */,
-			);
-			path = ViewCells;
-			sourceTree = "<group>";
-		};
 		BC9AC76A22091BDC00FE618C /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
 				BC9AC7642209197500FE618C /* Views */,
-				BC9AC76922091A5400FE618C /* ViewCells */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -295,7 +287,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Анастасия Соколан";
 				TargetAttributes = {
 					BCC6462121F7D9390025C8C1 = {
@@ -424,8 +416,8 @@
 				BCC6462621F7D9390025C8C1 /* AppDelegate.swift in Sources */,
 				BC4618D62204F01400E07A7E /* MessageView.swift in Sources */,
 				BCC6465A21FA6EFD0025C8C1 /* LanguageButton.swift in Sources */,
-				BC4618D82205067F00E07A7E /* MessageViewCell.swift in Sources */,
 				BCC6462E21F7D9390025C8C1 /* YandexTranslator.xcdatamodeld in Sources */,
+				BC1A46DD220BA68100A5039C /* MessageCell.swift in Sources */,
 				BCC6468321FB43CE0025C8C1 /* TranslatorView.swift in Sources */,
 				BC60F96B22063567004D5BDC /* Language.swift in Sources */,
 				BCC646902201E9470025C8C1 /* TranslatorViperInteractor.swift in Sources */,
@@ -486,6 +478,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -493,6 +486,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -543,6 +537,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -550,6 +545,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

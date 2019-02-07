@@ -5,37 +5,37 @@
 //  Created by Анастасия Соколан on 01.02.19.
 //  Copyright © 2019 Анастасия Соколан. All rights reserved.
 //
-/*
+
 import UIKit
 
-enum MessageType: Int {
-    case receive = 0
-    case send = 1
-}
-
 class MessageView: UIView {
-    var type: Int = MessageType.receive.rawValue {
+    var isSending: Bool = true {
         didSet {
+            self.backgroundColor = isSending ? colorReceive : colorSend
+            
             self.clipsToBounds = true
             self.layer.cornerRadius = 10
             
-            switch type {
-            case MessageType.receive.rawValue:
-                self.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
-                break
-            case MessageType.send.rawValue:
+            if isSending { //sending
                 self.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner]
-                break
-            default:
-                break
+            }
+            else { //receiving
+                self.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
             }
         }
     }
-
-    @IBOutlet weak var inputText: UILabel!
     
-    @IBOutlet weak var outputText: UILabel!
-
+    @IBOutlet weak var inputText: UILabel! {
+        didSet {
+            inputText.numberOfLines = 0
+        }
+    }
+    
+    @IBOutlet weak var outputText: UILabel! {
+        didSet {
+            outputText.numberOfLines = 0
+        }
+    }
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -45,20 +45,3 @@ class MessageView: UIView {
     */
 
 }
-
-extension UILabel {
-    var optimalHeight : CGFloat {
-        get
-        {
-            let label = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.width, height: CGFloat.greatestFiniteMagnitude))
-            label.numberOfLines = 0
-            label.lineBreakMode = NSLineBreakMode.byWordWrapping
-            label.font = self.font
-            label.text = self.text
-            label.sizeToFit()
-            return label.frame.height
-        }
-        
-    }
-}
-*/

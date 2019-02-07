@@ -28,8 +28,8 @@ class TranslatorViperPresenter: TranslatorViperViewOutput, ITranslatorViperInter
         interactor.configure(with: self)
     }
     
-    func refreshData() {
-        //
+    func refreshData(newViewInput text: String) {
+        interactor.startDataLoading()
     }
     
     func viewIsReady() {

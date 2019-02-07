@@ -19,7 +19,7 @@ struct TranslatedText: Codable {
     var text: [String]
 }
 
-struct Error {
+struct Error: Codable {
     var code: Int
     var message: String
 }
