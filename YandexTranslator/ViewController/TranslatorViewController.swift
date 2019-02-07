@@ -16,19 +16,8 @@ protocol ITranslatorViperViewInput: class {
 }
 
 protocol TranslatorViperViewOutput: class {
+    var messages: [Message] { get }
     func refreshData(newViewInput text: String)
-}
-
-class Message {
-    var input: String
-    var output: String
-    var isSending: Bool
-    
-    init(input: String, output: String, isSending: Bool) {
-        self.input = input
-        self.output = output
-        self.isSending = isSending
-    }
 }
 
 class TranslatorViewController: UIViewController, ITranslatorViperViewInput, UITableViewDelegate, UITableViewDataSource {

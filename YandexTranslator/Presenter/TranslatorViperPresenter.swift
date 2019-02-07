@@ -9,6 +9,8 @@
 import Foundation
 
 class TranslatorViperPresenter: TranslatorViperViewOutput, ITranslatorViperInteractorOutput {
+    var messages: [Message] = []
+    
     func didLoadData() {
         //code
     }
